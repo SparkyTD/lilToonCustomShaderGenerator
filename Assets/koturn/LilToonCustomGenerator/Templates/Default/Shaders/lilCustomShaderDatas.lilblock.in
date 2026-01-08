@@ -1,0 +1,15 @@
+ShaderName "%%SHADER_NAME%%"
+EditorName "%%NAMESPACE%%.%%INSPECTOR_NAME%%"
+!!ifnotempty:SHOULD_EMIT_GEOMETRY_SHADER!!
+Replace "            #pragma vertex vert\r\n            #pragma fragment frag\r\n" "            #pragma vertex vertCustom\r\n            #pragma geometry geomCustom\r\n            #pragma fragment frag\r\n            #pragma require geometry\r\n"
+Replace "            #pragma vertex vertTess\r\n            #pragma fragment frag\r\n            #pragma hull hull\r\n            #pragma domain domain\r\n            #pragma require tesshw tessellation\r\n" "            #pragma vertex vertTess\r\n            #pragma fragment frag\r\n            #pragma hull hull\r\n            #pragma domain domainCustom\r\n            #pragma geometry geomCustom\r\n            #pragma require tesshw tessellation geometry\r\n"
+!!  ifnotempty:OVERRIDE_FUR_GEOMETRY!!
+!!    ifnotempty:OVERRIDE_ONEPASS_GEOMETRY!!
+Replace "            #pragma vertex vert\r\n            #pragma geometry geom\r\n            #pragma fragment frag\r\n" "            #pragma vertex vert\r\n            #pragma geometry geomCustom\r\n            #pragma fragment frag\r\n            #pragma require geometry\r\n"
+!!    else!!
+Replace "Fur" "            #pragma vertex vert\r\n            #pragma geometry geom\r\n            #pragma fragment frag\r\n" "            #pragma vertex vert\r\n            #pragma geometry geomCustom\r\n            #pragma fragment frag\r\n            #pragma require geometry\r\n"
+!!    endif!!
+!!  elifnotempty:OVERRIDE_ONEPASS_GEOMETRY!!
+Replace "!Fur" "            #pragma vertex vert\r\n            #pragma geometry geom\r\n            #pragma fragment frag\r\n" "            #pragma vertex vert\r\n            #pragma geometry geomCustom\r\n            #pragma fragment frag\r\n            #pragma require geometry\r\n"
+!!  endif!!
+!!endif!!

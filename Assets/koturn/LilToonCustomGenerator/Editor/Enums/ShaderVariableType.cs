@@ -1,0 +1,32 @@
+namespace Koturn.LilToonCustomGenerator.Editor.Enums
+{
+    public enum ShaderVariableType
+    {
+        Float,
+        Float2,
+        Float3,
+        Float4,
+        Half,
+        Half2,
+        Half3,
+        Half4,
+        Fixed,
+        Fixed2,
+        Fixed3,
+        Fixed4,
+        Bool,
+        LilBool,
+        Int,
+        Int2,
+        Int3,
+        Int4,
+        UInt,
+        UInt2,
+        UInt3,
+        UInt4,
+        Texture2D,
+        Texture2DArray,
+        Texture3D,
+        TextureCube,
+    }
+}

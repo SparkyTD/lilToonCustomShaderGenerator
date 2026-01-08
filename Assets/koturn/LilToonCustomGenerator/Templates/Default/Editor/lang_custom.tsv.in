@@ -1,0 +1,6 @@
+Language	English	Japanese	Korean	Chinese Simplified	Chinese Traditional
+!!ifnotempty:SHADER_TITLE!!
+sCustomShaderTitle	%%SHADER_TITLE%%	%%SHADER_TITLE%%	%%SHADER_TITLE%%	%%SHADER_TITLE%%	%%SHADER_TITLE%%
+sCustomPropertyCategory	%%SHADER_TITLE%%	%%SHADER_TITLE%%	%%SHADER_TITLE%%	%%SHADER_TITLE%%	%%SHADER_TITLE%%
+!!endif!!
+%%LANGUAGE_FILE_CONTENT:skipempty%%

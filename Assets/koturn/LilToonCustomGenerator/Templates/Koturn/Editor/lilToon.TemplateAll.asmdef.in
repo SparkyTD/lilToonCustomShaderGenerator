@@ -1,0 +1,22 @@
+{
+    "name": "%%NAMESPACE%%",
+    "rootNamespace": "%%NAMESPACE%%",
+    "references": [
+        "GUID:e7f0f8dffe955d640bbc76d1d4f4986e"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+!!ifempty:SHOULD_GENERATE_VERSION_DEF_FILE!!
+    "allowUnsafeCode": false,
+!!else!!
+    "allowUnsafeCode": true,
+!!endif!!
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
